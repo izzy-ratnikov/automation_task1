@@ -120,6 +120,7 @@ def test_site_anime_url(driver_chrome):
     element.click()
     assert driver_chrome.current_url == 'https://animego.org/anime'
 
+
 def test_anime_attribute(driver_chrome):
     driver_chrome.get('https://animego.org/')
     xpath = '/html/body/div[2]/header/nav/div/div/ul[1]/li[1]/a'
@@ -144,7 +145,7 @@ def test_anime_text(driver_chrome):
     css = 'body > div:nth-child(3) > header > nav > div > div > ul.nav.navbar-nav.mr-auto.ml-2 > li:nth-child(1) > a'
     element = driver_chrome.find_element(By.CSS_SELECTOR, css)
     assert element.text == "Аниме"
-
+   
 
 
 
